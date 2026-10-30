@@ -1,0 +1,13 @@
+# Copy this to ~/.hermes/config.yaml under the mcp_servers: section
+# Then add CONTEXT7_API_KEY to ~/.hermes/.env
+
+mcp_servers:
+  context7:
+    url: https://mcp.context7.com/mcp
+    headers:
+      Authorization: "Bearer ${CONTEXT7_API_KEY}"
+  chrome-devtools:
+    command: npx
+    args: ["chrome-devtools-mcp@latest"]
+  # rea (registered via: npx rea-agents setup)
+  # adds its own MCP server entry automatically
